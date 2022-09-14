@@ -29,6 +29,9 @@ public class Runner {
             if (starterAdventure.getRooms().get(0) instanceof TreasureRoom){
                 System.out.printf("You have found a %s%n", ((TreasureRoom) starterAdventure.getRooms().get(0)).getTreasure().getName());
                 codeClanWarriors.collectTreasure(((TreasureRoom) starterAdventure.getRooms().get(0)).getTreasure());
+                if(codeClanWarriors.getPlayers().contains(myCleric)){
+                    codeClanWarriors.partyHeal(myCleric);
+                }
             }
             else if (starterAdventure.getRooms().get(0) instanceof EnemyRoom){
                 System.out.printf("You face a fearsome %s%n", ((EnemyRoom) starterAdventure.getRooms().get(0)).getEnemy().getName());

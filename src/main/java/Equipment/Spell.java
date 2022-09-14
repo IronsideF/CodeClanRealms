@@ -1,8 +1,8 @@
 package Equipment;
 
 public enum Spell {
-    FIREBALL(5),
-    LIGHTNINGSTRIKE(7);
+    FIREBALL(20),
+    LIGHTNINGSTRIKE(30);
 
     private int powerValue;
 

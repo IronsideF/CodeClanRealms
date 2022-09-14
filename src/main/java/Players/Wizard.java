@@ -16,7 +16,7 @@ public class Wizard extends Mage{
         Random rand = new Random();
         int accuracyCheck = rand.nextInt(3);
         if (accuracyCheck>1) {
-            castSpell(enemy);
+            enemy.setHp(spell.getPowerValue());
             System.out.printf("%s casts an impressive %s, dealing %s damage%n", this.getName(), this.getSpell(), this.getSpell().getPowerValue());
         } else {
             System.out.printf("%s shoots wide, their spell impacting the wall.%n", this.getName());
