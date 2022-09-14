@@ -1,5 +1,8 @@
 package Players;
+import Equipment.Weapon;
+public class Dwarf extends Fighter{
 
-public class Dwarf extends PlayerClass{
-
+    public Dwarf(String name, int hp, Weapon weapon) {
+        super(name, hp, weapon);
+    }
 }
