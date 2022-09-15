@@ -56,6 +56,7 @@ public class Party {
             player.takeDamage(enemy.getDamageDealt());
             if (player.getHp()<=0){
                 deadPlayers.add(player);
+                System.out.printf("%s has perished!%n", player.getName());
             }
             else if (player instanceof Fighter){
                 ((Fighter) player).attack(enemy);
@@ -70,7 +71,6 @@ public class Party {
         }
         for (Player player:deadPlayers){
             players.remove(player);
-            System.out.printf("%s has perished!%n", player.getName());
         }
         if (players.size()==0){
             return failQuest();
